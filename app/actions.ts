@@ -7,6 +7,7 @@ import { redirect } from "next/navigation";
 
 export const signUpAction = async (formData: FormData) => {
   const email = formData.get("email")?.toString();
+  const full_name = formData.get("full_name")?.toString();
   const password = formData.get("password")?.toString();
   const supabase = await createClient();
   const origin = (await headers()).get("origin");
@@ -24,8 +25,10 @@ export const signUpAction = async (formData: FormData) => {
     password,
     options: {
       emailRedirectTo: `${origin}/auth/callback`,
+      data: {
+        full_name,
     },
-  });
+  }});
 
   if (error) {
     console.error(error.code + " " + error.message);
@@ -33,8 +36,8 @@ export const signUpAction = async (formData: FormData) => {
   } else {
     return encodedRedirect(
       "success",
-      "/sign-up",
-      "Thanks for signing up! Please check your email for a verification link.",
+      "/sign-in",
+      "Thanks for signing up! You may login now!",
     );
   }
 };
