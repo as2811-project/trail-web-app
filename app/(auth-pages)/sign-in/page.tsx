@@ -34,7 +34,11 @@ export default async function Login(props: { searchParams: Promise<Message> }) {
           placeholder="Your password"
           required
         />
-        <SubmitButton pendingText="Signing In..." formAction={signInAction}>
+        <SubmitButton
+          pendingText="Signing In..."
+          formAction={signInAction}
+          className="bg-pink-500"
+        >
           Sign in
         </SubmitButton>
         <FormMessage message={searchParams} />

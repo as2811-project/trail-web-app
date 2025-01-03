@@ -20,7 +20,7 @@ export default async function Signup(props: {
 
   return (
     <>
-      <form className="flex flex-col min-w-64 max-w-64 mx-auto">
+      <form className="flex flex-col gap-4 min-w-64 mx-auto">
         <h1 className="text-2xl font-medium">Sign up</h1>
         <p className="text-sm text text-foreground">
           Already have an account?{" "}
@@ -41,7 +41,11 @@ export default async function Signup(props: {
             minLength={6}
             required
           />
-          <SubmitButton formAction={signUpAction} pendingText="Signing up...">
+          <SubmitButton
+            formAction={signUpAction}
+            pendingText="Signing up..."
+            className="bg-pink-500 hover:bg-pink-800 dark:bg-pink-600 dark:text-white hover:dark:bg-pink-800"
+          >
             Sign up
           </SubmitButton>
           <FormMessage message={searchParams} />

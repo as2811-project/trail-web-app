@@ -19,7 +19,7 @@ export default async function AuthButton() {
         <Button
           type="submit"
           variant={"outline"}
-          className="bg-black text-white hover:bg-stone-800 hover:text-white dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white rounded-full"
+          className="bg-pink-500 dark:bg-pink-600 text-white hover:bg-stone-800 hover:text-white dark:text-white dark:hover:bg-black dark:hover:text-white rounded-full"
         >
           Sign out
         </Button>
@@ -35,7 +35,12 @@ export default async function AuthButton() {
       >
         <Link href="/sign-in">Sign in</Link>
       </Button>
-      <Button asChild size="sm" variant={"default"}>
+      <Button
+        asChild
+        size="sm"
+        variant={"default"}
+        className="bg-pink-500 dark:bg-pink-600 text-white hover:bg-stone-800 hover:text-white dark:text-white dark:hover:bg-black dark:hover:text-white rounded-full"
+      >
         <Link href="/sign-up">Sign up</Link>
       </Button>
     </div>

@@ -30,7 +30,7 @@ export function JobStatisticsCard({
   }, [hasApplied]);
 
   return (
-    <Card className="border border-transparent dark:shadow-lg dark:bg-stone-900 dark:shadow-lg">
+    <Card className="border border-transparent dark:bg-stone-900 dark:shadow-lg">
       <CardHeader>
         <CardTitle className="font-normal text-md">{title}</CardTitle>
       </CardHeader>

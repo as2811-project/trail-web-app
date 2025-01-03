@@ -20,11 +20,11 @@ import { getJobStatistics } from "@/app/actions/getJobStatistics";
 const getColor = (count: number): string => {
   const colors: { [key: number]: string } = {
     0: "bg-gray-300",
-    1: "bg-sky-200 dark:bg-sky-300",
-    2: "bg-sky-400 dark:bg-sky-600",
-    3: "bg-sky-600 dark:bg-sky-700",
+    1: "bg-pink-200 dark:bg-pink-300",
+    2: "bg-pink-400 dark:bg-pink-600",
+    3: "bg-pink-600 dark:bg-pink-700",
   };
-  return colors[Math.min(count, 3)] ?? "bg-sky-800";
+  return colors[Math.min(count, 3)] ?? "bg-pink-800";
 };
 
 interface CommitGraphProps {
@@ -77,8 +77,8 @@ function CommitGraph({ hasApplied }: CommitGraphProps) {
           Your applications over the last 10 days
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <div className="flex items-center justify-center p-6">
+      <CardContent className="flex items-center justify-center">
+        <div className="p-6 ml-2 mr-2">
           <div id="contributions" className="flex gap-1">
             {commitsData.map((commitCount, i) => (
               <div
@@ -91,7 +91,7 @@ function CommitGraph({ hasApplied }: CommitGraphProps) {
                     <TooltipTrigger>
                       <div
                         className={cn(
-                          "h-8 w-8 rounded-sm",
+                          "h-7 w-7 rounded-sm",
                           getColor(commitCount)
                         )}
                       />

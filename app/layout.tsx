@@ -37,7 +37,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className="">
             <div className="flex-1 w-full flex flex-col gap-20 items-center">
-              <nav className="shadow-xl sticky z-40 top-0 w-full mt-5 max-w-6xl flex justify-center border rounded-md border-foreground/10 h-12">
+              <nav className="sticky shadow-xl z-40 top-0 w-full mt-5 max-w-6xl flex justify-center border rounded-md border-foreground/10 h-12">
                 <div className="flex items-center px-5 text-lg">
                   <span className={`${PacificoFont.className}`}>
                     <div className="grid grid-cols-2 gap-2 items-center">
